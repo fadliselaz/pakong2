@@ -1,0 +1,108 @@
+echo """
+ ____   _    _  _____  _   _  ____
+|  _ \ / \  | |/ / _ \| \ | |/ ___|
+| |_) / _ \ | ' / | | |  \| | |  _
+|  __/ ___ \| . \ |_| | |\  | |_| |
+|_| /_/   \_\_|\_\___/|_| \_|\____|
+
+------- I N S T A L L E R ---------
+---------- T E R M U X ------------
+"""
+sleep 2
+echo """
+***********************************
+install file yang dibutuhkan PAKONG
+***********************************
+
+"""
+echo "info :"
+echo """
+apabila muncul pertanyaan
+dalam bahasa ingriss
+tekan saja Y atau y
+
+"""
+sleep 2
+pkg install python3
+pkg install python-pip
+pkg intall unrar
+echo """
+*********************
+ tungu sebentar . .
+*********************
+
+"""
+sleep 2
+pip install gspread oauth2client
+echo "update termux package.."
+sleep 2
+pkg update
+echo "update complete"
+echo """
+**************************************
+membuang semua yang tidak dibutuhkan..
+**************************************
+
+"""
+sleep 2
+pkg autoremove
+pkg autoclean
+echo "cleaning complete"
+echo """
+*************************
+service packet yang rusak
+*************************
+
+"""
+sleep 2
+dpkg --configure -a
+pkg install -f
+echo """
+***************************
+service package berhasil...
+***************************
+
+"""
+sleep 2
+echo """
+mengupdate lagi...
+"""
+pkg update
+echo "upgrade semua.."
+echo """
+*********************
+sebentar lagi bray...
+*********************
+
+"""
+sleep 2
+pkg upgrade
+wget https://drive.google.com/open?id=11S9aueyNusExJziCl0i_96hBzIYQQQAy
+mv pakong.tar.xz /data/data/com.termux/files/home/
+cd
+tar -xf pakong.tar.xz
+rm pakong.tar.xz
+mv pakong.py .pakong.py
+
+
+sleep 2
+echo """
+****************************
+ PAKONG BERHASIL TERINSTALL
+****************************
+- Silakan kembali ke
+  directory home dengan
+  mengetikan cd
+
+- Silakan ketik : sh pakong
+  sh _spasi_ pakong
+  untuk memulai pakong..
+
+*************************
+ T E R I M A  K A S I H
+*************************
+
+    -= pakong@2018 =-
+"""
+sleep 5
+exit
